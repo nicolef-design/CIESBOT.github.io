@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="CIESBOT - Chatbot educativo creado por la Prof. Nicole para CIES Montessori"
+    >
+
+    <link
+    rel="icon"
+    type="image/png"
+    href="avatar ciesbot.png"
+>
+
+    <title>CIESBOT | CIES Montessori</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="ciesbot.css">
+    
+</head>
+
+
+<body>
+
+       
+
+    <div class="app">
+
+
+            
+        <header class="header">
+
+            <div class="bot-brand">
+
+                <!-- Avatar del chatbot -->
+            <div class="bot-avatar">
+
+    <img
+        src="avatar ciesbot.png"
+        alt="Avatar de CIESBOT"
+         width="70"
+        height="70"
+        style="
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        "
+    
+    >
+
+</div>
+
+
+                <!-- Identidad -->
+                <div class="brand-text">
+
+                    <h1>CIESBOT</h1>
+
+                    <p>
+                        Asistente de Robótica
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Estado del chatbot -->
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    EN LÍNEA
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+       
+            
+
+        <section class="bot-introduction">
+
+            <div class="introduction-content">
+
+                <span class="introduction-label">
+                    CIES MONTESSORI
+                </span>
+
+                <h2>
+                    Conoce a CIESBOT
+                </h2>
+
+                <p>
+                    Un chatbot creado por la
+                    <strong>Prof. Nicole</strong>
+                    para explorar la robótica,
+                    la tecnología y mucho más.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+       
+             
+
+        <main
+            id="chatContainer"
+            class="chat-container"
+        >
+
+            <div
+                id="chat"
+                class="chat"
+            >
+
+
+                
+                    
+
+                <div class="message bot-message">
+
+
+                    <!-- Avatar -->
+                  <img
+        src="avatar ciesbot.png"
+        alt="Avatar de CIESBOT"
+        width="70"
+        height="70"
+        style="
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        "
+    >
+
+
+                    <!-- Contenido -->
+                    <div class="message-content">
+
+
+                        <div class="message-name">
+                            CIESBOT
+                        </div>
+
+
+                        <div class="bubble">
+
+                            <p>
+                                ¡Hola! Soy
+                                <strong>CIESBOT</strong>.
+                            </p>
+
+                            <p>
+                                Fui creado por la
+                                <strong>Prof. Nicole</strong>,
+                                docente del
+                                <strong>CIES Montessori</strong>.
+                            </p>
+
+                            <p>
+                                Mi especialidad es la
+                                <strong>Robótica</strong>,
+                                pero puedes preguntarme
+                                muchas otras cosas.
+                            </p>
+
+                            <p>
+                                Ahora quiero saber algo:
+                                <strong>
+                                    ¿qué pregunta tienes para mí?
+                                </strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+                 
+
+            <div
+                id="typing"
+                class="typing hidden"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </main>
+
+
+
+      
+          
+        <section class="suggestions">
+
+            <button
+                type="button"
+                onclick="sendSuggestion('¿Quién te creó?')"
+            >
+                ¿Quién te creó?
+            </button>
+
+
+            <button
+                type="button"
+                onclick="sendSuggestion('¿Qué es la robótica?')"
+            >
+                ¿Qué es la robótica?
+            </button>
+
+
+            <button
+                type="button"
+                onclick="sendSuggestion('¿Qué es CIES Montessori?')"
+            >
+                CIES Montessori
+            </button>
+
+
+            <button
+                type="button"
+                onclick="sendSuggestion('¿Qué puedes hacer?')"
+            >
+                ¿Qué puedes hacer?
+            </button>
+
+
+            <button
+                type="button"
+                onclick="sendSuggestion('Hazme un reto de robótica')"
+            >
+                Reto de robótica
+            </button>
+
+        </section>
+
+
+           
+            
+
+        <footer class="input-area">
+
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Escribe una pregunta..."
+                    autocomplete="off"
+                    aria-label="Escribe una pregunta para CIESBOT"
+                >
+
+
+                <button
+                    id="sendButton"
+                    type="button"
+                    aria-label="Enviar mensaje"
+                >
+
+                    ➤
+
+                </button>
+
+            </div>
+
+
+        </footer>
+
+
+
+          
+        <div class="footer-info">
+
+            <span>
+                CIESBOT
+            </span>
+
+            <span class="footer-separator">
+                •
+            </span>
+
+            <span>
+                Creado por la Prof. Nicole
+            </span>
+
+            <span class="footer-separator">
+                •
+            </span>
+
+            <span>
+                CIES Montessori
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+
+       
+         
+
+    <script src="ciesbot.js"></script>
+
+</body>
+
+</html>
