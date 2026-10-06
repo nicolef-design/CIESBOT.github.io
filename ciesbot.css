@@ -1,0 +1,1247 @@
+/* ... CONFIGURACIÓN GENERAL ... */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --azul-cies: #1557a6;
+
+    --azul-oscuro: #0d3b73;
+
+    --azul-claro: #eaf3ff;
+
+    --rojo-cies: #d62828;
+
+    --rojo-claro: #fff0f0;
+
+    --blanco: #ffffff;
+
+    --gris-claro: #f4f7fb;
+
+    --gris: #6b7280;
+
+    --gris-oscuro: #273142;
+
+    --borde: #e1e7ef;
+
+    --sombra: 0 15px 40px rgba(13, 59, 115, 0.12);
+
+}
+
+
+/* ... CUERPO DE LA PÁGINA ... */
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8ff 0%,
+            #ffffff 50%,
+            #fff5f5 100%
+        );
+
+    color: var(--gris-oscuro);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+
+/* ... CONTENEDOR PRINCIPAL ... */
+
+.app {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    height: 92vh;
+
+    max-height: 850px;
+
+    min-height: 650px;
+
+    background: var(--blanco);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid var(--borde);
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+
+/* ... DECORACIÓN SUPERIOR ... */
+
+.app::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--azul-cies) 0%,
+            var(--azul-cies) 70%,
+            var(--rojo-cies) 70%,
+            var(--rojo-cies) 100%
+        );
+
+    z-index: 10;
+
+}
+
+
+/* ... ENCABEZADO ... */
+
+.header {
+
+    height: 82px;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--blanco);
+
+    border-bottom: 1px solid var(--borde);
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+
+/* ... MARCA DEL BOT ... */
+
+.bot-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+/* ... AVATAR DEL CHATBOT ... */
+
+.bot-avatar {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-cies),
+            var(--azul-oscuro)
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 15px rgba(21, 87, 166, 0.25);
+
+}
+
+
+/* ... ESPACIO PARA AVATAR PERSONALIZADO ... */
+
+/*
+    Para utilizar tu propio avatar:
+
+    Guarda la imagen como:
+
+    avatar-ciesbot.png
+
+    dentro de la carpeta del proyecto.
+
+    Luego puedes colocarla como fondo
+    utilizando la propiedad background-image.
+*/
+
+.bot-avatar {
+
+    background-image:
+        url("avatar-ciesbot.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* ... OCULTAR ROSTRO DE EJEMPLO SI USAS IMAGEN ... */
+
+.robot-face {
+
+    display: none;
+
+}
+
+
+/* ... TEXTO DE LA MARCA ... */
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.brand-text h1 {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    color: var(--azul-oscuro);
+
+}
+
+
+.brand-text p {
+
+    font-size: 12px;
+
+    color: var(--gris);
+
+    font-weight: 500;
+
+}
+
+
+/* ... ESTADO EN LÍNEA ... */
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: var(--azul-cies);
+
+    letter-spacing: 0.7px;
+
+}
+
+
+.status-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.12);
+
+}
+
+
+/* ... PRESENTACIÓN DEL BOT ... */
+
+.bot-introduction {
+
+    position: relative;
+
+    min-height: 125px;
+
+    padding: 25px 35px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #eef6ff 0%,
+            #ffffff 65%,
+            #fff2f2 100%
+        );
+
+    border-bottom: 1px solid var(--borde);
+
+}
+
+
+/* ... LOGO CIES MONTESSORI DE FONDO ... */
+
+/*
+    Coloca tu logo en la carpeta del proyecto
+    con el nombre:
+
+    logo-cies.png
+
+    Puedes cambiar este nombre por el que quieras.
+*/
+
+.bot-introduction::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 180px;
+
+    height: 100px;
+
+    background-image:
+        url("logo-cies.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+
+}
+
+
+/* ... CONTENIDO DE INTRODUCCIÓN ... */
+
+.introduction-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+}
+
+
+.introduction-label {
+
+    display: inline-block;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: var(--rojo-cies);
+
+    margin-bottom: 6px;
+
+}
+
+
+.introduction-content h2 {
+
+    font-size: 24px;
+
+    color: var(--azul-oscuro);
+
+    margin-bottom: 5px;
+
+}
+
+
+.introduction-content p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #536174;
+
+}
+
+
+.introduction-content strong {
+
+    color: var(--azul-cies);
+
+}
+
+
+/* ... ÁREA DEL CHAT ... */
+
+.chat-container {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 25px 35px;
+
+    background-color: var(--blanco);
+
+    scroll-behavior: smooth;
+
+    position: relative;
+
+}
+
+
+/* ... LOGO DE FONDO DEL CHAT ... */
+
+.chat-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("logo-cies.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: 280px;
+
+    opacity: 0.025;
+
+    pointer-events: none;
+
+}
+
+
+/* ... CONTENEDOR DE MENSAJES ... */
+
+.chat {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* ... MENSAJE GENERAL ... */
+
+.message {
+
+    display: flex;
+
+    gap: 11px;
+
+    margin-bottom: 20px;
+
+    animation:
+        messageAppear 0.25s ease-out;
+
+}
+
+
+@keyframes messageAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ... AVATAR DEL MENSAJE ... */
+
+.message-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    min-width: 36px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 18px;
+
+}
+
+
+/* ... AVATAR DEL BOT ... */
+
+.bot-message .message-avatar {
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-cies),
+            var(--azul-oscuro)
+        );
+
+}
+
+
+/* ... AVATAR DEL USUARIO ... */
+
+.user-message {
+
+    flex-direction: row-reverse;
+
+}
+
+
+.user-message .message-avatar {
+
+    background: var(--rojo-claro);
+
+}
+
+
+/* ... CONTENIDO DEL MENSAJE ... */
+
+.message-content {
+
+    max-width: 75%;
+
+}
+
+
+.message-name {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: var(--gris);
+
+    margin-bottom: 5px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.user-message .message-name {
+
+    text-align: right;
+
+}
+
+
+/* ... BURBUJA DEL BOT ... */
+
+.bot-message .bubble {
+
+    background: var(--azul-claro);
+
+    border:
+        1px solid #d8e8fb;
+
+    color: #26364a;
+
+    border-radius:
+        5px 18px 18px 18px;
+
+}
+
+
+/* ... BURBUJA DEL USUARIO ... */
+
+.user-message .bubble {
+
+    background: var(--azul-cies);
+
+    color: var(--blanco);
+
+    border-radius:
+        18px 5px 18px 18px;
+
+}
+
+
+/* ... BURBUJAS ... */
+
+.bubble {
+
+    padding: 13px 17px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.035);
+
+}
+
+
+.bubble p {
+
+    margin-bottom: 8px;
+
+}
+
+
+.bubble p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.bot-message .bubble strong {
+
+    color: var(--azul-cies);
+
+}
+
+
+.user-message .bubble strong {
+
+    color: white;
+
+}
+
+
+/* ... SUGERENCIAS ... */
+
+.suggestions {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    padding: 12px 30px;
+
+    border-top: 1px solid var(--borde);
+
+    background: #fafcff;
+
+}
+
+
+/* ... BOTONES DE SUGERENCIAS ... */
+
+.suggestions button {
+
+    border: 1px solid #cbdced;
+
+    background: var(--blanco);
+
+    color: var(--azul-cies);
+
+    border-radius: 20px;
+
+    padding: 8px 13px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+.suggestions button:hover {
+
+    background: var(--azul-cies);
+
+    color: var(--blanco);
+
+    border-color: var(--azul-cies);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ... ÁREA DE ESCRITURA ... */
+
+.input-area {
+
+    padding: 15px 30px;
+
+    background: var(--blanco);
+
+    border-top: 1px solid var(--borde);
+
+}
+
+
+/* ... CONTENEDOR DEL INPUT ... */
+
+.input-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: var(--gris-claro);
+
+    border: 1px solid #dbe3ec;
+
+    border-radius: 16px;
+
+    padding: 5px 6px 5px 16px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.input-wrapper:focus-within {
+
+    border-color: var(--azul-cies);
+
+    box-shadow:
+        0 0 0 3px rgba(21, 87, 166, 0.08);
+
+}
+
+
+/* ... CAMPO DE TEXTO ... */
+
+#userInput {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+    min-width: 0;
+
+}
+
+
+#userInput::placeholder {
+
+    color: #9aa5b4;
+
+}
+
+
+/* ... BOTÓN ENVIAR ... */
+
+#sendButton {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--azul-cies),
+            var(--azul-oscuro)
+        );
+
+    color: var(--blanco);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+#sendButton:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(21, 87, 166, 0.25);
+
+}
+
+
+#sendButton:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* ... INDICADOR DE ESCRITURA ... */
+
+.typing {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin: 0 0 12px 47px;
+
+}
+
+
+.typing span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--azul-cies);
+
+    animation:
+        typingAnimation 1.2s infinite ease-in-out;
+
+}
+
+
+.typing span:nth-child(2) {
+
+    animation-delay: 0.15s;
+
+}
+
+
+.typing span:nth-child(3) {
+
+    animation-delay: 0.3s;
+
+}
+
+
+@keyframes typingAnimation {
+
+    0%,
+    60%,
+    100% {
+
+        transform: translateY(0);
+
+        opacity: 0.4;
+
+    }
+
+    30% {
+
+        transform: translateY(-4px);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ... OCULTAR ELEMENTOS ... */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* ... PIE DEL CHATBOT ... */
+
+.footer-info {
+
+    min-height: 35px;
+
+    padding: 8px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 10px;
+
+    color: #8a95a5;
+
+    background: #fafbfd;
+
+    border-top: 1px solid var(--borde);
+
+}
+
+
+.footer-info span:first-child {
+
+    color: var(--azul-cies);
+
+    font-weight: 800;
+
+}
+
+
+.footer-separator {
+
+    color: var(--rojo-cies);
+
+}
+
+
+/* ... BARRA DE DESPLAZAMIENTO ... */
+
+.chat-container::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.chat-container::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.chat-container::-webkit-scrollbar-thumb {
+
+    background: #cbd7e5;
+
+    border-radius: 10px;
+
+}
+
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+
+    background: var(--azul-cies);
+
+}
+
+
+/* ... RESPONSIVE PARA TABLETS ... */
+
+@media (max-width: 800px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .app {
+
+        height: 96vh;
+
+        min-height: 600px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .header {
+
+        padding: 0 20px;
+
+    }
+
+
+    .bot-introduction {
+
+        padding: 20px;
+
+    }
+
+
+    .chat-container {
+
+        padding: 20px;
+
+    }
+
+
+    .suggestions {
+
+        padding: 10px 20px;
+
+    }
+
+
+    .input-area {
+
+        padding: 12px 20px;
+
+    }
+
+
+    .message-content {
+
+        max-width: 82%;
+
+    }
+
+}
+
+
+/* ... RESPONSIVE PARA CELULARES ... */
+
+@media (max-width: 550px) {
+
+    body {
+
+        padding: 0;
+
+    }
+
+
+    .app {
+
+        width: 100%;
+
+        height: 100vh;
+
+        max-height: none;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        border: none;
+
+    }
+
+
+    .header {
+
+        height: 72px;
+
+    }
+
+
+    .bot-avatar {
+
+        width: 44px;
+
+        height: 44px;
+
+    }
+
+
+    .brand-text h1 {
+
+        font-size: 18px;
+
+    }
+
+
+    .status {
+
+        font-size: 9px;
+
+    }
+
+
+    .bot-introduction {
+
+        min-height: 110px;
+
+        padding: 18px;
+
+    }
+
+
+    .introduction-content h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .introduction-content p {
+
+        font-size: 13px;
+
+    }
+
+
+    .bot-introduction::after {
+
+        right: 10px;
+
+        width: 120px;
+
+    }
+
+
+    .chat-container {
+
+        padding: 18px 15px;
+
+    }
+
+
+    .message-content {
+
+        max-width: 85%;
+
+    }
+
+
+    .bubble {
+
+        font-size: 13px;
+
+        padding: 11px 13px;
+
+    }
+
+
+    .suggestions {
+
+        padding: 8px 12px;
+
+        max-height: 80px;
+
+        overflow-y: auto;
+
+    }
+
+
+    .suggestions button {
+
+        font-size: 11px;
+
+        padding: 7px 10px;
+
+    }
+
+
+    .input-area {
+
+        padding: 10px 12px;
+
+    }
+
+
+    .footer-info {
+
+        font-size: 9px;
+
+    }
+
+}
+
+/* ... TAMAÑO DEL AVATAR DE CIESBOT ... */
+
